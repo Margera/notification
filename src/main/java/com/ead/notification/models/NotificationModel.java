@@ -1,7 +1,18 @@
+package com.ead.notification.models;
+
+import com.ead.notification.enums.NotificationStatus;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+import javax.persistence.*;
+import java.io.Serializable;
+import java.time.LocalDateTime;
+import java.util.UUID;
+
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Entity
 @Table(name = "TB_NOTIFICATIONS")
-public class NotificationModel {
+public class NotificationModel implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -66,5 +77,6 @@ public class NotificationModel {
 
     public void setNotificationStatus(NotificationStatus notificationStatus) {
         this.notificationStatus = notificationStatus;
-    }  
+    }
 }
+
