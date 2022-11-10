@@ -12,6 +12,8 @@ spring:
     config:
       discovery:
         serviceId: ead-config-server
+      username: configserver
+      password: 'ead123cs'
   datasource:
     url:  jdbc:postgresql://localhost:5432/ead-notification-v2
     username: postgres
@@ -27,7 +29,7 @@ spring:
         show_sql: true
   output:
     ansi:
-      enabled: Always
+      enabled: always
   rabbitmq:
     addresses: amqps://oqaevxaf:6KU7WK_x0k2Et0CwgwlOOdf95NAR4uPG@woodpecker.rmq.cloudamqp.com/oqaevxaf
 
